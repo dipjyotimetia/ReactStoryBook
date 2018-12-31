@@ -1,6 +1,6 @@
 {
   "name": "taskbox",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": true,
   "dependencies": {
     "react": "^16.7.0",
@@ -16,7 +16,9 @@
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 9009 -s public",
     "build-storybook": "build-storybook -s public",
-    "builds-storybook": "build-storybook -c .storybook"
+    "builds-storybook": "build-storybook -c .storybook",
+    "jest:integration": "jest -c integration/jest.config.js",
+    "test:integration": "start-server-and-test storybook http-get://localhost:9009 jest:integration"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -36,9 +38,16 @@
     "@storybook/addons": "^4.1.4",
     "@storybook/react": "^4.1.4",
     "babel-loader": "^8.0.4",
+    "enzyme": "^3.8.0",
+    "enzyme-adapter-react-16": "^1.7.1",
+    "jest": "^23.6.0",
+    "jest-image-snapshot": "^2.7.0",
+    "jest-puppeteer": "^3.7.0",
     "prop-types": "^15.6.2",
+    "puppeteer": "^1.11.0",
     "react-chromatic": "0.8.4",
     "react-test-renderer": "^16.7.0",
-    "require-context.macro": "^1.0.4"
+    "require-context.macro": "^1.0.4",
+    "start-server-and-test": "^1.7.11"
   }
 }
