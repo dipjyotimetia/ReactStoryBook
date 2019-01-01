@@ -66,3 +66,17 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `npm run build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+
+
+## React jest enzyme
+https://scotch.io/tutorials/testing-react-components-with-enzyme-and-jest
+https://medium.com/codeclan/testing-react-with-jest-and-enzyme-20505fec4675
+
+## Enzyme cheet sheet
+https://devhints.io/enzyme
+
+## React storybook
+https://www.learnstorybook.com/react/en/get-started/
+
+## Mocks
+https://medium.com/codeclan/mocking-es-and-commonjs-modules-with-jest-mock-37bbb552da43
