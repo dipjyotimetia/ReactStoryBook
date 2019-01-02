@@ -4,7 +4,6 @@ import PropTypes from 'prop-types';
 function List(props) {
     const { items } = props;
     if (!items.length) {
-        // No Items on the list, render an empty message
         return <span className="empty-message">No items in list</span>;
     }
     return (

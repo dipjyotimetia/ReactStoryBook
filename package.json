@@ -17,6 +17,7 @@
     "storybook": "start-storybook -p 9009 -s public",
     "build-storybook": "build-storybook -s public",
     "builds-storybook": "build-storybook -c .storybook",
+    "loki-ci": "build-storybook && loki --requireReference --reactUri file:./storybook-static",
     "jest:integration": "jest -c integration/jest.config.js",
     "test:integration": "start-server-and-test storybook http-get://localhost:9009 jest:integration"
   },
@@ -43,11 +44,30 @@
     "jest": "^23.6.0",
     "jest-image-snapshot": "^2.7.0",
     "jest-puppeteer": "^3.7.0",
+    "loki": "^0.14.1",
     "prop-types": "^15.6.2",
     "puppeteer": "^1.11.0",
     "react-chromatic": "0.8.4",
     "react-test-renderer": "^16.7.0",
     "require-context.macro": "^1.0.4",
     "start-server-and-test": "^1.7.11"
+  },
+  "loki": {
+    "chromeSelector": ".wrapper > *, #root > *",
+    "diffingEngine": "looks-same",
+    "configurations": {
+      "chrome.laptop": {
+        "target": "chrome.docker",
+        "width": 1366,
+        "height": 768,
+        "deviceScaleFactor": 1,
+        "mobile": false,
+        "fitWindow": false
+      },
+      "chrome.iphone7": {
+        "target": "chrome.docker",
+        "preset": "iPhone 7"
+      }
+    }
   }
 }

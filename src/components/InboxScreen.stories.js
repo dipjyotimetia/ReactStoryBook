@@ -6,7 +6,6 @@ import { Provider } from 'react-redux';
 import { PureInboxScreen } from './InboxScreen';
 import { defaultTasks } from './TaskList.stories';
 
-// A super-simple mock of a redux store
 const store = {
     getState: () => {
         return {

@@ -6,11 +6,8 @@ describe('List tests', () => {
 
     it('renders list-items', () => {
         const items = ['one', 'two', 'three'];
-        // Replace shallow iwth mount
         const wrapper = mount(<List items={items} />);
-        // Let's check what wrong in our instance
         console.log(wrapper.debug());
-        // Expect the wrapper object to be defined
         expect(wrapper.find('.list-items')).toBeDefined();
         expect(wrapper.find('.item')).toHaveLength(items.length);
     });
@@ -19,7 +16,6 @@ describe('List tests', () => {
         const items = ['Thor', 'Loki'];
         const wrapper = shallow(<List items={items} />);
         console.log(wrapper.debug());
-        // Check if an element in the Component exists
         expect(wrapper.contains(<li key='Thor' className="item">Thor</li >)).toBeTruthy();
     });
 
@@ -27,7 +23,6 @@ describe('List tests', () => {
         const items = ['John', 'James', 'Luke'];
         const wrapper = shallow(<List items={items} />);
         console.log(wrapper.debug());
-        //Expect the child of the first item to be an array
         expect(wrapper.find('.item').get(0).props.children).toEqual('John');
     });
 });
